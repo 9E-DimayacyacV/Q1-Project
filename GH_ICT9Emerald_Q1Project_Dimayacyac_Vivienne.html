@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1-Project</title>
+    <style>
+        body{
+            background-color: rgb(145, 166, 139);
+        }
+        ol li{
+            font-size: 35px;
+            text-align: center;
+        }
+        ol{
+            list-style: none;
+        }
+        ul{
+            list-style: none;
+        }
+        ul li{
+            margin-right: 30px;
+            float: left;
+            font-size: 30px;
+        }
+        footer{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 20px;
+            font-size: 25px;
+            width: auto;
+            height: auto;
+            background-color: #44573a;
+            margin-left: -50px;
+            margin-right: -50px;
+            margin-bottom: -20px;
+        }
+        div{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding-left: 15px;
+            color: rgb(232, 248, 218);
+        }
+        .basis img{
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1{
+            font-size: 60px;
+            color: rgb(248, 243, 235);
+            margin-bottom: -20px;
+        }
+        h2{
+            font-size: 50px;
+            text-align: center;
+            color: rgb(244, 249, 239);
+            margin-bottom: -20px;
+        }
+        p{
+            font-size: 30px;
+            text-align: center;
+        }
+        .header{
+        width: auto;
+        height: 200px;
+        background:#44573a;
+        border-radius: 8px;
+        position: sticky;
+        justify-content: space-between;
+        top: 0;
+        display: flex;
+        padding: 12px 50px;
+        box-sizing: border-box;
+        margin-left: -50px;
+        margin-top: -20px;
+        margin-right: -50px;
+        margin-bottom: 80px;
+        }
+        .logo img{
+            max-width: 200px;
+            max-height: auto;
+            display: flex;
+            align-items: center;
+            object-fit: contain;
+        }
+        .hero-text{
+            text-align: center;
+        }
+        .flexbox{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        .profile img{
+            width: 40%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .profile{
+            width: auto;
+            height: auto;
+            background: #424b28;
+            border-radius: 8px;
+            margin-left: 50px;
+            margin-right: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 80px;
+        }
+        .about{
+            width: auto;
+            height: auto;
+            background: #5d6939;
+            border-radius: 8px;
+            margin-left: 35px;
+            margin-right: 50px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 40px;
+            padding-right: 40px;
+            margin-bottom: 80px;
+        }
+        .about-text{
+            text-align: center;
+            margin-right: 50px;
+        }
+        .works{
+            margin-left: 50px;
+            margin-right: 50px;
+            width: auto;
+            height: auto;
+            background: #687341;
+            border-radius: 8px;
+            margin-left: 37px;
+            margin-right: 50px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            margin-bottom: 50px;
+        }
+        li a{
+            display: block;
+            text-decoration: none;
+            color: antiquewhite;
+            font-size: 30px;
+            transition: 0.2s ease;
+        }
+        li a:hover{
+            color: rgb(142, 174, 113);
+            font-size: 29px;
+        }
+        a{
+            color: rgb(38, 74, 22);
+            font-style: italic;
+        }
+        .basis2{
+            width: auto;
+            height: auto;
+            background: #9bad67;
+            border-radius: 8px;
+            margin-left: 280px;
+            margin-right: 280px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            margin-bottom: 100px;
+        }
+        dt{
+            font-size: 30px;
+        }
+        dd{
+            font-size: 25px;
+        }
+        .basis3{
+            width: auto;
+            height: auto;
+            background: #8c9e55;
+            border-radius: 8px;
+            margin-left: 300px;
+            margin-right: 300px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            margin-bottom: 100px;
+        }
+        .basis3 dl{
+            margin-right: 50px;
+            margin-left: 50px;
+        }
+        .main{
+            margin-bottom: 100px;
+        }
+        .form{
+            align-content: center;
+            text-align: center;
+            width: 900px;
+            height: auto;
+            background: #7e8b56;
+            border-radius: 8px;
+            margin-left: 55px;
+            margin-right: 55px;
+            padding-top: 50px;
+            padding-bottom: 70px;
+            margin-bottom: 100px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .type input{
+            width: 300px;
+            height: auto;
+        }
+        h5{
+            margin-top: 50px;
+            margin-bottom: 5px;
+            font-size: 30px;
+        }
+        .find{
+            align-content: center;
+        }
+        label{
+            font-size: 20px;
+        }
+        .rating select{
+            width: 200px;
+            height: 30px;
+        }
+        .feedback textarea{
+            width: 400px;
+            height: 100px;
+        }
+        .feedback{
+            margin-bottom: 50px;
+        }
+        .submit-but{
+            width: 200px;
+            height: auto;
+            background-color: #424b28;
+            color: #cbd7a8;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 40px;
+            margin-top: 50px;
+            cursor: pointer;
+            transition: background-color 0.5s ease;
+        }
+
+        .submit-but:hover{
+            background: #e6f9af;
+            color: #424b28;
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="/Q1/Assessment/PROJ/visd.png" alt="Logo">
+        </div>
+
+        <div class="flexbox">
+            <ul>
+                <li><a href="#home">About Me</a></li>
+                <li><a href="#works">My Works</a></li>
+                <li><a href="#contacts">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- END OF HEADER -->
+
+
+
+
+
+    <!-- START OF HERO -->
+    <div class="profile">
+        <img src="/Q1/Assessment/PROJ/visd (2).png" alt="Profile Picture">
+        <div class="hero-text">
+            <h1>Hello, I am Vivienne Dimayacyac</h1>
+            <p>Aspiring writer/web developer</p>
+        </div>
+    </div>
+    <!-- END OF HERO -->
+
+
+
+
+
+
+    <!-- START OF ABOUT ME -->
+    <div class="main">
+        <div class="about">
+            <div class="about-text">
+                <h2>ABOUT ME</h2>
+                <p>Greetings! I am Vivienne Dimayacyac, a grade 9 student from OB Montessori Greenhills who enjoys to partake in multiple hobbies such as the following: </p>
+
+                <br>
+                <br>
+
+                <div class="basis3">
+                    <dl>
+                        <dt><strong>WRITING</strong></dt>
+                        <dd>I enjoy writing short stories, proses, poems, and essays.</dd>
+
+                        <br>
+                        <br>
+
+                        <dt><strong>SPORTS</strong></dt>
+                        <dd>I enjoy playing badminton and baseballl.</dd>
+
+                        <br>
+                        <br>
+
+                        <dt><strong>CODING</strong></dt>
+                        <dd>I enjoy learning new things in HTML code using websites such as <a href="https://www.w3schools.com/">W3 Schools</a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <!-- END OF ABOUT ME -->
+
+
+
+
+
+        <!-- MY WORKS -->
+        <div class="works">
+            <h2>MY WORKS</h2>
+
+            <br>
+            
+            <!-- START OF BIAS BY THE BLOOD -->
+            <ol>
+                <div class="basis2">
+                    <li>"Bias by the Blood" is a political speech discussing the positive effects of passing the Anti-Political Dynasty Bill.</li>
+                    
+                    <br>
+                    <br>
+
+                    <div class="basis">
+                        <img src="/Q1/Assessment/PROJ/eng.png" alt="English Political Speech">
+                    </div>
+                    
+                    <p>
+                        Click <a href="https://docs.google.com/document/d/1A5C8eNTQMllwhmd2skwkkhydXLIyS3aD/edit">here</a> to view this work in full.
+                    </p>
+                </div>
+
+
+            <!-- START OF SW 1 -->
+                <div class="basis2">
+                    <li>This website showcases my favorite songs from the OPM artist, Earl Agustin.</li>
+                    
+                    <br>
+                    <br>
+
+                    <div class="basis">
+                        <img src="/Q1/Assessment/PROJ/sw1.png" alt="My favorite songs">
+                    </div>
+
+                    <p>
+                        Click <a href="file:///Users/atty.jsd/Downloads/ICT%209/Q1/Assessment/SW1/GH_ICT9Emerald_Q1Seatwork1_Dimayacyac_Vivienne.html">here</a> to view this work in full.
+                    </p>
+                </div>
+            <!-- END OF SW 1 -->
+
+            <!-- START OF DRILL 2 -->
+                <div class="basis2">
+                    <li>I made this website in order to let people rate movies.</li>
+                    
+                    <br>
+                    <br>
+
+                    <div class="basis">
+                        <img src="/Q1/Assessment/PROJ/drill2.png" alt="Rate a movie">
+                    </div>
+
+                    <p>
+                        Click <a href="file:///Users/atty.jsd/Downloads/ICT%209/Q1/Assessment/DRILL2/GH_ICT9Emerald_Q1Drill2_Dimayacyac_Vivienne.html?Movie+Choice=&genre=on&genre=on&genre=on&rating=on">here</a> to view this work in full.
+                    </p>
+                </div>
+             <!-- END OF DRILL 2 -->
+            </ol>
+        </div>
+    </div>
+    <!-- END OF MAIN -->
+
+
+
+
+
+    <!-- START OF FORM -->
+    <div class="form">
+        <form>
+            <h2>CONTACT ME</h2>
+            <!-- NAME -->
+            <div class="type">
+                <h5>Your Name:</h5>
+                <input type="text" name="Your Name" placeholder="Full name">
+
+                <!-- EMAIL -->
+                <h5>Your Email:</h5>
+                <input type="email" name="Your Email" placeholder="dimayacyac.vs@obmontessori.edu.ph">
+            </div>
+
+            <!-- HOW TO FIND ME -->
+            <div class="find">
+                <!-- FACEBOOK -->
+                <h5>How did you find me?</h5>
+                <br>
+                <input type="radio" name="contact">
+                <label for="contact">Facebook</label>
+
+                <br>
+                <br>
+
+                <input type="radio" name="contact">
+                <label for="contact">Google</label>
+
+                <br>
+                <br>
+
+                <!-- FRIENDS -->
+                <input type="radio" name="contact">
+                <label for="contact">Friends</label>
+            </div>
+            <!-- END OF HOW TO FIND ME -->
+
+
+            
+            <!-- INTERESTS -->
+            <div class="interests">
+                <!-- WEB -->
+                <h5>Interested In:</h5>
+                <input type="checkbox" name="interest">
+                <label for="interest">Web Design</label>
+
+                <br>
+                <br>
+
+                <!-- GRAPHIC -->
+                <input type="checkbox" name="interest">
+                <label for="interest">Graphic Design</label>
+
+                <br>
+                <br>
+
+                <!-- ROBOTICS -->
+                <input type="checkbox" name="interest">
+                <label for="interest">Robotics</label>
+            </div>
+            <!-- END OF INTERESTS -->
+
+
+
+
+             <!-- RATE ME -->
+            <div class="rating">
+                    <h5>Rate My Portfolio</h5>
+                    <select>
+                        <option value="1">Select Rating</option>
+                        <option value="2">Needs Imporvement</option>
+                        <option value="3">Below Average</option>
+                        <option value="4">Average</option>
+                        <option value="5">Above Average</option>
+                        <option value="6">Excellent</option>
+                    </select>
+            </div>
+            <!-- END OF RATE ME -->
+
+
+
+
+            <!-- FEEDBACK -->
+            <div class="feedback">
+                <h5>Any Feedback?</h5>
+                <textarea placeholder="Write your feedback here"></textarea>
+            </div>
+            <!-- END OF FEEDBACK -->
+
+
+
+
+            <!-- BUTTON -->
+            <button type="submit" class="submit-but">
+                Submit
+            </button>
+        </form>
+    </div>
+    <!-- END OF FORM -->
+
+    <div class="footer">
+        <footer>©2026 | Vivienne Dimayacyac | Q1 Project | 9-Emerald</footer>
+    </div>
+</body>
+</html>
